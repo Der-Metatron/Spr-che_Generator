@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+  </head>
+  <body>
+    <!-- Java script für Sounds -->
+    <script>
+      let bleep = new Audio();
+      bleep.src = "images/slash.mp3";
+    </script>
+    <!-- Navigator -->
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="https://www.youtube.com/user/Ruhrfront1972"
+            onmousedown="bleep.play()"
+            >Meine Musik</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Der-Metatron" onmousedown="bleep.play()"
+            >Mein Github</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ichi.pro/de/7-kostenlose-apis-uber-die-niemand-spricht-14265547315479"
+            onmousedown="bleep.play()"
+            >Link</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- Uberschrift -->
+    <h1>EVIL</h1>
+    <!-- Ausgabe der API Daten im Text Feld -->
+    <div id="textbox">
+      <label for="Sprüche"> </label>
+      <input id="Sprüche" type="text" />
+    </div>
+    <!--   <p>Sprüche Generator <%= title %></p>  -->
+
+    <!-- Button Gerenerator -->
+    <div align="center">
+      <button onmousedown="bleep.play()">
+        Böhse Sprüche:<br />(klick mich)
+      </button>
+    </div>
+  </body>
+</html>
