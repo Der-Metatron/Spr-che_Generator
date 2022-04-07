@@ -2,8 +2,14 @@
 body {
   background-image: url("/images/lori.jpeg");
   background-size: cover;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
 }
+
 /* mediaqueris für automatische Anpassung des Bildes auf handy usw.*/
+
 .withbg {
   background-size: cover;
 }
@@ -13,6 +19,7 @@ body {
     background-image: url(seashell-720x446.jpg);
     border: 4px solid blue;
     height: 300px;
+    position: sticky;
   }
 }
 
@@ -22,6 +29,7 @@ body {
     background-image: url(seashell-1660x1027.jpg);
     border: 4px solid beige;
     height: 460px;
+    position: sticky;
   }
 }
 /* Überschrift */
@@ -62,7 +70,7 @@ li a:hover {
 }
 /* Button zum Generieren der Sprüche */
 button {
-  margin-top: 480px;
+  margin-top: 400px;
   padding: 20px 10px 20px 10px;
   width: 200px;
   height: 100px;
@@ -82,11 +90,10 @@ button:hover {
 #textbox {
   display: block;
   color: white;
+  text-shadow: 5px 5px rgb(14, 14, 14);
+  font-size: 1.5rem;
   text-align: center;
-}
-/* Innere Text-Box */
-#Sprüche {
-  height: 8rem;
-  width: 20rem;
-  background: rgb(219, 15, 15);
+  height: 200px;
+  width: 400px;
+  background-color: rgb(220, 30, 20);
 }

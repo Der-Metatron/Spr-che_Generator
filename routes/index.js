@@ -1,39 +1,37 @@
 const axios = require("axios");
-
+/* let ermöglicht es Variablen zu deklarieren, deren Gültigkeitsbereich 
+auf den Block, den Befehl oder den Ausdruck beschränkt ist, in dem sie deklariert sind.  */
 let express = require("express");
 let router = express.Router();
-/* Button Sound */
+/* Const kann eine symbolische Konstante deklariert werden. Dabei wird analog zur Initialisierung 
+einer Variable ein Bezeichner an einen Wert gebunden, mit dem Unterschied, dass bei einer 
+Konstante diese Bindung später nicht mehr verändert werden kann. */
 
-/* Input Feld */
-/* 
-const label = document.createElement("label");
-label.setAttribute("for", "username");
-label.innerHTML = "Username: ";
+/* Die get Syntax bindet eine Objekteigenschaft an eine Funktion */
+const getInsult = async () => {
+  /* Die try. catch-Anweisung rahmt einen Block von Anweisungen ein und legt Reaktionen 
+  fest, die im Fehlerfall ausgeführt werden. */
+  try {
+    const response = await axios.get(
+      "https://evilinsult.com/generate_insult.php?lang=en&type=json"
+    );
+    /* Die return Anweisung beendet einen Funktionsaufruf und spezifiziert einen Wert,
+     der von der Funktion zum Aufrufer zurückgegeben wird. */
+    return response.data.insult;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// insert label
-document.body.appendChild(label);
-
-// create textbox
-const input = document.createElement("input");
-input.setAttribute("id", "username");
-input.setAttribute("type", "text");
-
-// insert textbox
-document.body.appendChild(input);
- */
 /* Zur Hompage */
-router.get("/", function (req, res, next) {
+router.get("/", async (req, res, next) => {
   console.log("test");
-  res.render("index", { title: "EVIL" });
+  try {
+    const insult = await getInsult();
+    res.render("index", { title: "Evil", data: insult });
+  } catch (error) {
+    next(error);
+  }
 });
-axios
-  .get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
-  .then(function (response) {
-    console.log(response.data.insult);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .then(function () {});
 
 module.exports = router;

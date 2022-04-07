@@ -37,15 +37,14 @@
     <!-- Uberschrift -->
     <h1>EVIL</h1>
     <!-- Ausgabe der API Daten im Text Feld -->
-    <div id="textbox">
-      <label for="Sprüche"> </label>
-      <input id="Sprüche" type="text" />
+    <div align="center">
+      <div id="textbox"><%= data %></div>
     </div>
     <!--   <p>Sprüche Generator <%= title %></p>  -->
 
     <!-- Button Gerenerator -->
     <div align="center">
-      <button onmousedown="bleep.play()">
+      <button onmousedown="bleep.play() " onclick="window.location.href='/'">
         Böhse Sprüche:<br />(klick mich)
       </button>
     </div>
