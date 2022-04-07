@@ -94,6 +94,7 @@ button:hover {
   font-size: 1.5rem;
   text-align: center;
   height: 200px;
-  width: 400px;
+  width: 410px;
   background-color: rgb(220, 30, 20);
+  box-shadow: 5px 5px 5px 5px rgb(255, 255, 255);
 }
