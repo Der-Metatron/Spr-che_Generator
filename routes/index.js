@@ -8,9 +8,11 @@ einer Variable ein Bezeichner an einen Wert gebunden, mit dem Unterschied, dass 
 Konstante diese Bindung später nicht mehr verändert werden kann. */
 
 /* Die get Syntax bindet eine Objekteigenschaft an eine Funktion */
+
 const getInsult = async () => {
   /* Die try. catch-Anweisung rahmt einen Block von Anweisungen ein und legt Reaktionen 
   fest, die im Fehlerfall ausgeführt werden. */
+
   try {
     const response = await axios.get(
       "https://evilinsult.com/generate_insult.php?lang=en&type=json"

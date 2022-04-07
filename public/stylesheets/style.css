@@ -1,11 +1,12 @@
 /* Hintergrundbild */
 body {
   background-image: url("/images/lori.jpeg");
-  background-size: cover;
-
+  background-size: contain;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*   background-attachment: fixed;*/
   position: relative;
+  background-color: #333;
 }
 
 /* mediaqueris für automatische Anpassung des Bildes auf handy usw.*/
@@ -50,7 +51,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
+  border-style: groove;
 }
 
 li {
@@ -89,12 +91,12 @@ button:hover {
 /* Text-Box */
 #textbox {
   display: block;
-  color: white;
-  text-shadow: 5px 5px rgb(14, 14, 14);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgb(14, 14, 14);
   font-size: 1.5rem;
   text-align: center;
   height: 200px;
   width: 410px;
-  background-color: rgb(220, 30, 20);
+  background-color: rgba(220, 30, 20, 0.8);
   box-shadow: 5px 5px 5px 5px rgb(255, 255, 255);
 }
