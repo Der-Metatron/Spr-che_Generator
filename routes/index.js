@@ -28,6 +28,7 @@ router.get("/", async (req, res, next) => {
   console.log("test");
   try {
     const insult = await getInsult();
+    /* Die Daten aus der API die Abgerufen werden sollen */
     res.render("index", { title: "Evil", data: insult });
   } catch (error) {
     next(error);
